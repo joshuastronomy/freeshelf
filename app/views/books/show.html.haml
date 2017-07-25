@@ -1,0 +1,19 @@
+%p
+  %strong Title:
+  = @book.title
+%p
+  %strong Author:
+  = @book.author
+%p
+  %strong Description:
+  = @book.description
+%p
+  %strong URL:
+  = @book.url
+-# %h2 Comments
+-# = render @article.comments
+-# %h2 Add a comment:
+-# = render 'comments/form'
+= link_to 'Edit this book', edit_book_path(@book)
+|
+= link_to 'Back', books_path
