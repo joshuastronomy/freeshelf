@@ -1,19 +1,21 @@
-%p
+%p.show
   %strong Title:
   = @book.title
-%p
+%p.show
   %strong Author:
   = @book.author
-%p
+%p.show
   %strong Description:
   = @book.description
-%p
+%p.show
   %strong URL:
   = @book.url
 -# %h2 Comments
 -# = render @article.comments
 -# %h2 Add a comment:
 -# = render 'comments/form'
-= link_to 'Edit this book', edit_book_path(@book)
-|
-= link_to 'Back', books_path
+
+- if @book.user == current_user
+  = link_to 'Edit this book', edit_book_path(@book), :class => "editbutton"
+%br
+= link_to 'Back', books_path, :class => "backbutton"

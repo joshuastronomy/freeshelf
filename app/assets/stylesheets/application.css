@@ -32,6 +32,18 @@
    color: orange;
  }
 
+ form {
+   text-align: center;
+ }
+
+ .show  {
+   text-align: center;
+ }
+
+.backbutton, .editbutton {
+  display: block;
+  text-align: center;
+}
 
  .table {
    margin: 0 auto;
@@ -50,7 +62,7 @@
    text-align: center;
  }
 
-.toplink  {
+.toplink, .homelink, .status  {
   display: block;
 text-align: center;
 }
